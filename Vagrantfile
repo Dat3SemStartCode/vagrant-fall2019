@@ -40,20 +40,19 @@ config.vm.provision :shell, :path => "bootstrap.sh"
 #end
 
  #config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1"
- #config.vm.network "forwarded_port", guest: 9999, host: 8099, host_ip: "127.0.0.1"    
- #config.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "127.0.0.1"
- #config.vm.network "forwarded_port", guest: 3306, host: 3307, host_ip: "127.0.0.1"
+ config.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "127.0.0.1"
+ config.vm.network "forwarded_port", guest: 3306, host: 3307, host_ip: "127.0.0.1"
 
 
 #config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "172.25.200.200"
-config.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "172.25.200.200"
-config.vm.network "forwarded_port", guest: 3306, host: 3306, host_ip: "172.25.200.200"
+#config.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "172.25.200.200"
+#onfig.vm.network "forwarded_port", guest: 3306, host: 3306, host_ip: "172.25.200.200"
 
    
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "172.25.200.200"
+  #config.vm.network "private_network", ip: "172.25.200.200"
 
 
 
