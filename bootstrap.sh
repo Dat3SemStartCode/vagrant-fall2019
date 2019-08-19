@@ -67,6 +67,11 @@ MYSQL_INPUT2
 echo "Restarting MySQL..."
 sudo service mysql restart
 
+# echo "add cronjob"
+crontab -l > mycron
+echo "30 * * * * mysqldump -u dev -pax2 --all-databases > /vagrant/mysql_dumps/mysql_backup.sql" >> mycron
+crontab mycron
+rm mycron
 
 # Run script as sudo: sudo ./setup.sh
 ########################################################################################
